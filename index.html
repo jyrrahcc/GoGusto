@@ -10,13 +10,13 @@
         <title>Go Gusto</title>
     </head>
     <body>
-        <header>
+        <header id="header">
             <section class="logo-container">
                 <img src="res/GoGustoLogo.svg" class="logo"/>
                 <h1>Go Gusto</h1>
             </section>
             <nav>
-                <a href="#home">Home</a>
+                <a href="#home" class="act">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#destinations">Destinations</a>
                 <a href="#contact">Contact Us</a>
@@ -31,21 +31,27 @@
                     <p class="highlight">Are you ready for an unforgettable journey to the heart of Italy? Experience the beauty, culture, and cuisine of this stunning country with Go Gusto. Our meticulously crafted tour package will take you on an incredible adventure through Rome, Venice, Pisa, Florence, and Milan.</p>
                 </section>
             </article>
-            <article id="about">
-                <section id="partners">
-                    <img src="res/bnb.png"/>
-                    <img src="res/etihad.png"/>
-                    <img src="res/mercure.png"/>
-                    <img src="res/pal.png"/>
+            <article id="about" class="about-us">
+                <section class="banner">
                 </section>
                 <section>
                     <h2 class="title">About Us</h2>
                     <section class="description-container">
-                        <img src="res/GoGustoLogo.svg" class="logo"/>
+                        <img src="res/GoGustoLogo.svg"/>
                         <section>
-                            <p class="title">Go Gusto</p>
+                            <h3 class="title">Go Gusto</h3>
                             <p>Go Gusto, loosely translated from Italian as "Go with Flavor," embodies the essence of what we are all about. We believe that travel should be as flavorful and rich as the finest Italian cuisine, offering an array of tastes, sensations, and emotions. Our goal is to immerse you in the beauty, culture, and heritage of Italy, ensuring you savor every moment to its fullest.</p>
+                            <a class="btn">Learn More</a>
                         </section>
+                    </section>
+                </section>
+                <section id="partners">
+                    <h2 class="title">Our Trusted Travel Partners</h2>
+                    <section>
+                        <img src="res/bnb.png"/>
+                        <img src="res/etihad.png"/>
+                        <img src="res/mercure.png"/>
+                        <img src="res/pal.png"/>
                     </section>
                 </section>
             </article>
@@ -53,5 +59,20 @@
         <footer>
             
         </footer>
+        <script>
+            // JavaScript to change header background color when scrolling
+            window.addEventListener("scroll", function() {
+                var header = document.getElementById("header");
+                var scrollPosition = window.scrollY;
+
+                if (scrollPosition >= window.innerHeight) {
+                    // When scrolled down to 100vh or more
+                    header.classList.add("transparent-bg");
+                } else {
+                    // When not scrolled down to 100vh
+                    header.classList.remove("transparent-bg");
+                }
+            });
+        </script>
     </body>
 </html>
