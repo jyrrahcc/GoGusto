@@ -61,9 +61,21 @@ nav a {
     color: white;
 }
 
-nav a:not(:last-child):hover, .act {
+nav a:hover, .act {
     text-shadow: 0 0 10px rgba(255, 255, 255, 1);
     box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+}
+
+#menu {
+    display: none;
+}
+
+#menu-btn {
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 100%;
+    display: none;
 }
 
 .btn {
@@ -141,7 +153,6 @@ main {
 }
 
 #about {
-    padding-top: 40px;
     background-color: white;
     text-align: center;
     position: relative;
@@ -160,7 +171,7 @@ main {
     background-position: center;
     width: 100%;
     margin-bottom: 30px;
-    height: 100px;
+    height: 150px;
 }
 
 #partners section {
@@ -217,5 +228,15 @@ section#partners img {
 
     nav a {
         margin: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    nav a:not(:last-child) {
+        display: none;
+    }
+
+    #menu-btn {
+        display: block;
     }
 }
