@@ -16,6 +16,7 @@ h1 {
     color: white;
     font-size: 30px;
     text-shadow: 1px 1px 4px black;
+    display: none;
 }
 
 .title {
@@ -27,12 +28,17 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    margin: 0px;
+}
+
 p {
     font-weight: 300;
 }
 
 header {
-    margin: 10px;
+    height: 80px;
+    margin: 30px;
     width: 95%;
     max-width: 2000px;
     transition: 0.5s;
@@ -41,7 +47,7 @@ header {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
 }
 
 nav {
@@ -55,7 +61,7 @@ nav {
 nav a {
     width: max-content;
     text-decoration: none;
-    margin: 20px;
+    margin: 0px 20px;
     padding: 10px;
     border-radius: 20px;
     color: white;
@@ -94,12 +100,9 @@ nav a:hover, .act {
 }
 
 .logo {
-    width: 50px;
-    border-radius: 100%;
+    width: 80px;
     padding: 10px;
     margin: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     top: 100px;
 }
 
@@ -159,6 +162,7 @@ main {
 }
 
 #partners {
+    margin-top: 100px;
     padding: 30px 0px;
     display: flex;
     flex-direction: column;
@@ -170,32 +174,30 @@ main {
     background-size: cover;
     background-position: center;
     width: 100%;
-    margin-bottom: 30px;
-    height: 150px;
-}
-
-#partners section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    height: 115px;
 }
 
 section#partners img {
     height: 100%;
     max-height: 50px;
     width: auto;
+    padding: 40px;
 }
 
 #about h2 {
     color: black;
 }
 
+
+
 #about img {
     width: 100%;
     min-width: 200px;
     max-width: 400px;
-    padding: 40px;
+}
+
+#menu-content {
+    display: none;
 }
 
 .description-container {
@@ -209,9 +211,9 @@ section#partners img {
 .description-container > section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
-    margin: 20px
+    gap: 20px;
 }
 
 .description-container p {
@@ -231,12 +233,171 @@ section#partners img {
     }
 }
 
-@media (max-width: 850px) {
-    nav a:not(:last-child) {
-        display: none;
+#destinations {
+    padding-top: 130px;
+    background-color: white;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.slideshow h2 {
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+}
+
+.slideshow {
+    color: white;
+    border-radius: 50px;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 10px black;
+    text-shadow: 1px 1px 4px black;
+    background-image: url(res/colosseum.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: slider 20s infinite linear;
+    z-index: 2;
+}
+
+#package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 350px;
+    width: 100%;
+    position: absolute;
+    height: fit-content;
+    top: 300px;
+    background: linear-gradient(to bottom, white, skyblue, skyblue, skyblue, white);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+#package > p {
+    max-width: 1000px;
+}
+
+#package > section {
+    margin: 50px 0px;
+}
+
+#package img {
+    width: 100%;
+    max-width: 450px;
+    min-width: 200px;
+}
+
+.travel-container {
+    margin: 0px 20px;
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.travel-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.travel-container section:first-child p {
+    max-width: 450px;
+}
+
+.travel-container section:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    width: 0px;
+    height: 100%;
+    max-height: 500px;
+    border: 2px solid black;
+    padding: 0;
+}
+
+.travel-container section:nth-child(2) p{
+    margin: 0px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 17px 25px;
+    color: black;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url("res/colosseum.jpg");
     }
+    33% {
+        background-image: url("res//trevi.jpg");
+    }
+
+    66% {
+        background-image: url("res/doge.jpg");
+    }
+}
+
+@media (max-width: 850px) {
 
     #menu-btn {
         display: block;
+    }
+
+    #menu-content {
+        display: none;
+        position: fixed;
+        top: 100px;
+        flex-direction: column;
+        align-items: end;
+        z-index: -1;
+        right: 10%;
+    }
+
+    nav section:first-child {
+        display: none;
+    }
+    
+    #menu-content a {
+        background-color: #ECB800;
+        color: white;
+        transition: all 0.5s;
+        text-shadow: 1px 1px 4px #000000;
+        border-radius: 300px;
+        box-shadow: 0px 0px 0px #000000;
+    }
+
+    #menu-content a:hover, .act, #menu-content a:first-child{
+        text-shadow: 0 0 10px black;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: red;
+    }
+
+    #menu:checked ~ section {
+        display: flex;
+        animation-name: insert;
+        animation-duration: 1s;
+    }
+
+    #menu:checked ~ #menu-btn {
+        text-shadow: 0 0 10px black;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: red;
+    }
+}
+
+@keyframes insert {
+    from {
+        top: 40px;
+    }
+
+    to {
+        top: 100px;
     }
 }
