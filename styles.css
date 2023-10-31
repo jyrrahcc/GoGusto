@@ -236,7 +236,6 @@ section#partners img {
 
 #destinations {
     padding-top: 130px;
-    padding-bottom: 50px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -270,15 +269,20 @@ section#partners img {
 
 #package {
     padding-top: 500px;
+    padding-bottom: 100px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: linear-gradient(to bottom, white, skyblue, blue, skyblue, white);
+    background: linear-gradient(to bottom, white, lightgray, gray, lightgray, white, lightgray, black);
     color: white;
     text-align: center;
     text-shadow: 1px 1px 4px #000000;
+}
+
+#package > p.title {
+    margin: 30px 20px;
 }
 
 #package > p:nth-child(2) {
@@ -290,10 +294,6 @@ section#partners img {
     margin: 0px 20px 40px 20px;
     font-size: 15px;
     font-weight: bold;
-}
-
-#package > section {
-    margin: 50px 0px;
 }
 
 #package img {
@@ -345,7 +345,7 @@ section#partners img {
 }
 
 footer i {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 footer {
@@ -358,6 +358,11 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+    font-size: 15px;
+}
+
+footer p {
+    font-size: 15px;
 }
 
 footer section:not(:last-child) p:first-child {
@@ -367,13 +372,29 @@ footer section:not(:last-child) p:first-child {
 }
 
 footer > section, footer > p {
-    margin: 20px 20px;
+    margin: 20px;
 }
 
-footer > section:first-child {
+#contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: first baseline;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+#contact > section:first-child p {
+    max-width: 200px;
+}
+
+hr {
+    width: 97%;
+}
+
+#contact > section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }
 
 footer > section:last-child {
