@@ -23,7 +23,7 @@
                     <a href="#destinations">Destinations</a>
                     <a href="#contact">Contact Us</a>
                 </section>
-                <a class="btn" href="">Start Your Journey</a>
+                <a class="btn" id="form-btn">Start Your Journey</a>
                 <input type="checkbox" id="menu">
                 <label for="menu" class="btn" name="menu-btn" id="menu-btn" title="Menu">
                     <i class="fa-solid fa-bars"></i>
@@ -36,6 +36,55 @@
                 </section>
             </nav>
         </header>
+        <article class="form" id="form">
+            <section>
+                <section class="close">
+                    <input type="checkbox" id="close">
+                    <label for="close" name="close-btn" id="close-btn" title="Close">
+                        <i class="fas fa-window-close"></i>
+                    </label>
+                </section>
+                <section>
+                    <h2 class="title">Start Your Journey</h2>
+                    <p>Have questions or ready to book your dream trip? Contact us today and our friendly team will assist you.</p>
+                </section>
+                <form>
+                    <section>
+                        <section>
+                            <label for="firstName">First Name</label>
+                            <input type="text" placeholder="Enter first name..." name="firstName" id="firstName" required/>
+                        </section>
+                        <section>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" placeholder="Enter last name..." name="lastName" id="lastName" required/>
+                        </section>
+                    </section>
+                    <section>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter email..."  name="email" id="email" required/>
+                    </section>
+                    <section>
+                        <label for="phone">Phone Number (e.g. 09123456789)</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number..." name="phone" pattern="[0-9]{11}" required/>
+                    </section>
+                    <section>
+                        <label for="date">When do you plan to travel?</label>
+                        <input type="date" id="date" name="date" min="2023-11-01" required/>
+                    </section>
+                    <section>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </section>
+                    <section id="agree">
+                        <input type="checkbox" id="policy" name="policy" value="true" required/>
+                        <label for="policy">You agree to our policies.</label>
+                    </section>
+                    <section>
+                        <input class="btn" type="submit" value="Submit" />
+                    </section>
+                </form>
+            </section>
+        </article>
         <main>
             <article id="home">
                 <h2 class="cta">Go Gusto: Your Gateway to Italian Adventures</h2>
@@ -166,10 +215,13 @@
                             <i class="fa fa-twitter-square" aria-hidden="true"></i>
                         </section>
                     </section>
-                    <section class="newsletter">
+                    <section>
                         <p>Subscribe to Our Newsletter</p>
-                        <input type="email" placeholder="Enter your email">
-                        <button>Subscribe</button>
+                        <p>Keep updated with our latest packages:</p>
+                        <section>
+                            <input type="email" placeholder="Enter your email">
+                            <button class="btn">Subscribe</button>
+                        </section>
                     </section>
                 </section>
                 <hr/>
@@ -180,10 +232,23 @@
             </footer>
         </main>
         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const closeButton = document.getElementById("close-btn");
+                const form = document.getElementById("form");
+                const formBtn = document.getElementById("form-btn");
+        
+                closeButton.addEventListener("click", function () {
+                    form.style.display = "none";
+                });
+                formBtn.addEventListener("click", function () {
+                    form.style.display = "flex";
+                });
+            });
+
             // JavaScript to change header background color when scrolling
             window.addEventListener("scroll", function() {
-                var header = document.getElementById("header");
-                var scrollPosition = window.scrollY;
+                const header = document.getElementById("header");
+                const scrollPosition = window.scrollY;
 
                 if (scrollPosition >= window.innerHeight) {
                     // When scrolled down to 100vh or more

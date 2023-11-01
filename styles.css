@@ -162,6 +162,7 @@ main {
 }
 
 #partners {
+    background-color: lightgray;
     margin-top: 100px;
     padding: 30px 0px;
     display: flex;
@@ -275,7 +276,7 @@ section#partners img {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: linear-gradient(to bottom, white, lightgray, gray, lightgray, white, lightgray, black);
+    background: linear-gradient(to bottom, white, lightgray, gray, lightgray, gray, lightgray, black);
     color: white;
     text-align: center;
     text-shadow: 1px 1px 4px #000000;
@@ -388,6 +389,7 @@ footer > section, footer > p {
 }
 
 hr {
+    margin-top: 40px;
     width: 97%;
 }
 
@@ -401,6 +403,99 @@ footer > section:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+footer a:hover {
+    font-size: 16px;
+    text-shadow: 5px 5px 5px white;
+}
+
+input {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.form {
+    font-size: 10px;
+    z-index: 8;
+    position: fixed;
+    color: white;
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 6;
+    font-size: 20px;
+}
+
+.close:hover {
+    text-shadow: 1px 1px 5px white;
+}
+
+.close input {
+    display: none;
+}
+
+.form input {
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.form label {
+    text-indent: 5px;
+}
+
+.form > section:first-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 70%;
+    max-width: 300px;
+    background-color: black;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+form > section:first-child {
+    display: flex;
+    gap: 10px;
+}
+
+form > section > section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#agree {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+form > section:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
 }
 
 
