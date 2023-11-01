@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     color: white;
     font-size: 30px;
@@ -20,15 +21,18 @@ h1 {
 }
 
 .title {
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 30px;
 }
 
 h2 {
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
 
 h3 {
+    font-family: 'Playfair Display', serif;
     margin: 0px;
 }
 
@@ -369,6 +373,7 @@ footer p {
 footer section:not(:last-child) p:first-child {
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Playfair Display', serif;
     text-shadow: 1px 1px 4px black;
 }
 
@@ -424,9 +429,12 @@ input {
     background: rgba(0,0,0,0.75);
     width: 100%;
     height: 100%;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 1s;
 }
 
 .close {
@@ -451,7 +459,7 @@ input {
 }
 
 .form label {
-    text-indent: 5px;
+    padding-left: 5px;
 }
 
 .form > section:first-child {
@@ -468,15 +476,22 @@ input {
     gap: 10px;
 }
 
+form {
+    width: 100%;
+    max-width: 300px;
+}
+
 form > section:first-child {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 form > section > section {
     display: flex;
+    width: 25%;
     flex-direction: column;
-    width: 100%;
+    flex: 1 1 0;
 }
 
 #agree {
