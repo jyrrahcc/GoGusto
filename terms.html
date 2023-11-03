@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/f4f1b8744c.js" crossorigin="anonymous"></script>
-        <title>About Us</title>
+        <title>Terms and Conditions</title>
     </head>
     <body id="terms-body">
         <header id="header">
@@ -21,8 +21,8 @@
             <nav>
                 <section>
                     <a href="home.html">Home</a>
-                    <a href="aboutus.html" class="act">About Us</a>
-                    <a href="#destinations">Destinations</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="itinerary.html">Itinerary</a>
                     <a href="#contact">Contact Us</a>
                 </section>
                 <a class="btn" id="form-btn">Start Your Journey</a>
@@ -32,8 +32,8 @@
                 </label>
                 <section id="menu-content">
                     <a href="home.html">Home</a>
-                    <a href="aboutus.html" class="act">About Us</a>
-                    <a href="#destinations">Destinations</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="itinerary.html">Itinerary</a>
                     <a href="#contact">Contact Us</a>
                 </section>
             </nav>
@@ -95,32 +95,35 @@
                     <h2 class="title">Terms and Conditions</h2>
                     <section>
                         <h3 class="title">Booking</h3>
-                        <p>To secure your reservation, a 50% deposit of the total tour price is required.</p>
-                        <p>The remaining balance must be paid in full at least 30 days prior to the tour's start date.</p>
+                        <ul>
+                            <li>To secure your reservation, a 50% deposit of the total tour price is required.</li>
+                            <li>The remaining balance must be paid in full at least 30 days prior to the tour's start date.</li>
+                        </ul>
                     </section>
                     <section>
                         <h3 class="title">Cancellation and Refund</h3>
-                        <section>
-                            <h4 class="title">Cancellation</h4>
-                            <p>- Cancellation requests must be submitted at least two weeks before the scheduled tour date.</p>
-                            <p>- In cases of medical issues or severe illness, tour rebooking may be allowed with a slight additional charge.</p>
-                            <p>- No-shows are not eligible for any refund.</p>
-                            <p>- Failure to arrive at the designated tour meeting point on time will result in a non-refundable cancellation on the spot.</p>
-                        </section>
-                        <section>
-                            <h4 class="title">Refund</h4>
-                            <p>- If a cancellation is made at least two weeks prior to the tour, a refund may be granted. The exact refund percentage may vary (please check with our team).</p>
-                            <p>- Payment options include credit cards and cash.</p>
-                        </section>
-                        <p><strong>PACKAGE VALID UNTIL DECEMBER 2023</strong></p>
+                        <ul>
+                            <dl>
+                                <dt class="title">Cancellation</dt>
+                                <dd>- Cancellation requests must be submitted at least two weeks before the scheduled tour date.</dd>
+                                <dd>- In cases of medical issues or severe illness, tour rebooking may be allowed with a slight additional charge.</dd>
+                                <dd>- No-shows are not eligible for any refund.</dd>
+                                <dd>- Failure to arrive at the designated tour meeting point on time will result in a non-refundable cancellation on the spot.</dd>
+                                <dt class="title">Refund</dt>
+                                <dd>- If a cancellation is made at least two weeks prior to the tour, a refund may be granted. The exact refund percentage may vary (please check with our team).</dd>
+                                <dd>- Payment options include credit cards and cash.</dd>
+                            </dl>
+                        </ul>
+                        <p><strong>** PACKAGE VALID UNTIL DECEMBER 2023 **</strong></p>
                     </section>
                     <section>
-                        <h3 class="title">Inclusions</h3>
-                        <p>Enjoy daily breakfast meals.</p>
-                        <!-- Include other inclusions -->
+                        <h3 class="title">Tour Inclusions</h3>
+                        <ul>
+
+                        </ul>
                     </section>
                     <section>
-                        <h3 class="title">Exclusions</h3>
+                        <h3 class="title">Tour Exclusions</h3>
                     <p>Visa fees are not included.</p>
                     <!-- Include other exclusions -->
                     </section>
@@ -134,16 +137,16 @@
                     </section>
                     <section>
                         <p>About Us</p>
-                        <a href="#mission-vision">Our Mission</a>
-                        <a href="#mission-vision">Our Vision</a>
-                        <a href="#why-choose-us">Why Choose Us</a>
+                        <a href="aboutus.html#mission-vision">Our Mission</a>
+                        <a href="aboutus.html#mission-vision">Our Vision</a>
+                        <a href="aboutus.html#why-choose-us">Why Choose Us</a>
                     </section>
                     <section>
                         <p>Terms and Conditions</p>
-                        <a href="">Cancellation Policy</a>
-                        <a href="">Refund Policy</a>
-                        <a href="">Mode of Payment</a>
-                        <a href="">Deadline of Payment eme eme</a>
+                        <a href="terms.html">Cancellation Policy</a>
+                        <a href="terms.html">Refund Policy</a>
+                        <a href="terms.html">Mode of Payment</a>
+                        <a href="terms.html">Deadline of Payment</a>
                     </section>
                     <section>
                         <section>
@@ -201,7 +204,7 @@
                 const header = document.getElementById("header");
                 const scrollPosition = window.scrollY;
 
-                if (scrollPosition >= 200) {
+                if (scrollPosition >= 100) {
                     // When scrolled down to 100vh or more
                     header.classList.add("transparent-bg");
                 }

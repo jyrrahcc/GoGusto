@@ -1,3 +1,5 @@
+
+
 body {
     padding: 0px;
     margin: 0px;
@@ -29,6 +31,8 @@ h1 {
 h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
+    margin: initial 20px;
+    text-align: center;
 }
 
 h3 {
@@ -38,6 +42,7 @@ h3 {
 
 p {
     font-weight: 300;
+    margin: initial 20px;
 }
 
 header {
@@ -673,6 +678,169 @@ form > section:not(:first-child) {
 /*terms and conditions */
 .terms-conditions {
     background-color: white;
-    text-align: center;
+    text-align: justify;
     padding: 50px 0px;
+}
+
+.terms-conditions {
+    padding: 50px 40px;
+}
+
+.terms-conditions dl > dt {
+    font-size: 25px;
+}
+
+.terms-conditions section > p {
+    text-align: center;
+}
+
+/*Itinerary styles*/
+video {
+    width: 80%;
+    margin: 20px;
+    border-radius: 20px;;
+    box-shadow: 0 0 10px 3px black;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    object-fit: contain;
+}
+
+#itinerary p.title {
+    font-size: 20px;
+}
+
+#itinerary {
+    background-color: white;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#itinerary h3 {
+    font-size: 25px;
+}
+
+/* Style the table */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the table header (th) */
+table th {
+background-color: #333;
+color: white;
+padding: 12px;
+text-align: left;
+}
+
+/* Style the table data cells (td) */
+table td {
+padding: 8px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+
+/* Add a background color to alternating rows for better readability */
+table tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+/* Hover effect on table rows */
+table tr:hover {
+background-color: #ddd;
+}
+
+/* Style the table caption (optional) */
+table caption {
+font-weight: bold;
+padding: 10px;
+background-color: #333;
+color: white;
+text-align: center;
+}
+
+/* Add borders to the header and footer of the table */
+table thead th {
+border: 2px solid #333;
+}
+
+table tfoot td {
+border: 2px solid #333;
+}
+
+/* Add some spacing and rounded corners to the table */
+table {
+border-radius: 5px;
+margin: 0 auto;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style links within the table */
+table a {
+color: #333;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+table a:hover {
+color: #666;
+}
+
+/* Center the text in the header cells */
+table th {
+text-align: center;
+}
+
+#itinerary > section.ddown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Basic styling for the dropdown */
+
+section.ddown > section:first-child {
+    width: 80%;
+    cursor: pointer;
+    height: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+}
+
+#itinerary > section.ddown > section > section {
+    width: 70%;
+    border: 1px solid lightgray;
+}
+
+
+#itinerary .ddown-content {
+    display: none;
+    flex-direction: column;
+    justify-items: center;
+    gap: 20px;
+    padding: 50px;
+    align-items: center;
+}
+
+/* Styling for the plus and x symbols */
+.plus:before {
+    content: "+";
+}
+.cross:before {
+    content: "×";
 }
