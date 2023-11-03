@@ -823,7 +823,7 @@ section.ddown > section:first-child {
 }
 
 #itinerary > section.ddown > section > section {
-    width: 70%;
+    width: 30%;
     border: 1px solid lightgray;
 }
 
