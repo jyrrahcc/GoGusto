@@ -298,6 +298,7 @@ section#partners img {
     max-height: 50px;
     width: auto;
     padding: 40px;
+    box-sizing: content-box;
 }
 
 #about h2 {
