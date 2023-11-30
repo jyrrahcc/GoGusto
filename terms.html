@@ -23,7 +23,7 @@
                     <a href="home.html">Home</a>
                     <a href="aboutus.html">About Us</a>
                     <a href="itinerary.html">Tour Package</a>
-                    <a href="terms.html" class="act">Terms & Conditions</a>
+                    <a href="terms.html" class="act">Terms &amp; Conditions</a>
                     <a href="#contact">Contact Us</a>
                 </section>
                 <a class="btn" id="form-btn">Start Your Journey</a>
@@ -35,7 +35,7 @@
                     <a href="home.html">Home</a>
                     <a href="aboutus.html">About Us</a>
                     <a href="itinerary.html">Tour Package</a>
-                    <a href="terms.html" class="act">Terms & Conditions</a>
+                    <a href="terms.html" class="act">Terms &amp; Conditions</a>
                     <a href="#contact">Contact Us</a>
                 </section>
             </nav>
@@ -98,8 +98,7 @@
                     <section>
                         <ul>
                             <li>GoGusto acts as an agent for the suppliers of the services and activities included in the tour package.</li>
-                            <li>GoGusto is not liable for any loss, injury, or damage caused by the negligence or willful misconduct of any supplier.</li>
-                            <li>GoGusto is not liable for any delays or cancellations caused by unforeseen circumstances, such as weather, strikes, or political unrest.</li>
+                            <li>GoGusto shall not be liable for any loss, damage, or injury suffered by you arising from your participation in the tour package, unless such loss, damage, or injury is caused by the willful negligence or gross misconduct of GoGusto.</li>
                           </ul>
                           
                           <h2>BOOKING</h2>
@@ -117,7 +116,7 @@
                           
                           <h2>ADDITIONAL INFORMATION</h2>
                           <ul>
-                            <li>The accommodation tour price is based on double occupancy. Single occupancy is available at an additional cost.</li>
+                            <li>The price of accommodation is based on single occupancy. If two people will occupy the room, the price will be lowered by 50%.</li>
                             <li>A valid passport and Schengen Visa is required for all travelers.</li>
                             <li>GoGusto reserves the right to change the tour itinerary without notice.</li>
                           </ul>
@@ -234,8 +233,8 @@
                         </section>
                         <section>
                             <p>Inquiries</p>
-                            <p>(046) 431-8726</p>
-                            <p>info@gogustotravel.com</p>
+                            <p>(+63) 9298478279</p>
+                            <p>gogustotraveltours@gmail.com</p>
                         </section>
                         <section>
                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
@@ -293,5 +292,62 @@
                 }
             });
         </script>
+            <!-- Scroll Animation Script -->
+    <script>
+        let observer;
+        function handleIntersect(entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (entry.target.dataset.animated !== 'true') {
+                triggerAnimation(entry.target);
+                entry.target.dataset.animated = 'true';
+              }
+            } else {
+              entry.target.dataset.animated = 'false';
+            }
+          });
+        }
+  
+        function triggerAnimation(element) {
+          if (element.classList.contains('fade-down')) {
+            element.classList.remove('fade-down');
+            void element.offsetWidth;
+            element.classList.add('fade-down');
+          } else if (element.classList.contains('fade-right')) {
+            element.classList.remove('fade-right');
+            void element.offsetWidth;
+            element.classList.add('fade-right');
+          } else if (element.classList.contains('fade-left')) {
+            element.classList.remove('fade-left');
+            void element.offsetWidth;
+            element.classList.add('fade-left');
+          } else if (element.classList.contains('fade-up')) {
+            element.classList.remove('fade-up');
+            void element.offsetWidth;
+            element.classList.add('fade-up');
+          } else {
+            element.classList.remove('fade');
+            void element.offsetWidth;
+            element.classList.add('fade');
+          }
+        }
+  
+        function setupIntersectionObserver() {
+          const elements = document.querySelectorAll('.animate');
+          const options = {
+            root: null,
+            rootMargin: '80px',
+            threshold: 0.1
+          };
+  
+          observer = new IntersectionObserver(handleIntersect, options);
+  
+          elements.forEach(element => {
+            observer.observe(element);
+          });
+        }
+        
+        document.addEventListener('DOMContentLoaded', setupIntersectionObserver);
+      </script>
     </body>
 </html>

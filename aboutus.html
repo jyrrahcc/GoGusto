@@ -23,7 +23,7 @@
                     <a href="home.html">Home</a>
                     <a href="aboutus.html" class="act">About Us</a>
                     <a href="itinerary.html">Tour Package</a>
-                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
                     <a href="#contact">Contact Us</a>
                 </section>
                 <a class="btn" id="form-btn">Start Your Journey</a>
@@ -35,7 +35,7 @@
                     <a href="home.html">Home</a>
                     <a href="aboutus.html" class="act">About Us</a>
                     <a href="#itinerary.html">Tour Package</a>
-                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="terms.html">Terms &amp; Conditions</a>
                     <a href="#contact">Contact Us</a>
                 </section>
             </nav>
@@ -177,8 +177,8 @@
                         </section>
                         <section>
                             <p>Inquiries</p>
-                            <p>(046) 431-8726</p>
-                            <p>info@gogustotravel.com</p>
+                            <p>(+63) 9298478279</p>
+                            <p>gogustotraveltours@gmail.com</p>
                         </section>
                         <section>
                             <i class="fa fa-facebook-square" aria-hidden="true"></i>
@@ -236,5 +236,62 @@
                 }
             });
         </script>
+            <!-- Scroll Animation Script -->
+    <script>
+        let observer;
+        function handleIntersect(entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (entry.target.dataset.animated !== 'true') {
+                triggerAnimation(entry.target);
+                entry.target.dataset.animated = 'true';
+              }
+            } else {
+              entry.target.dataset.animated = 'false';
+            }
+          });
+        }
+  
+        function triggerAnimation(element) {
+          if (element.classList.contains('fade-down')) {
+            element.classList.remove('fade-down');
+            void element.offsetWidth;
+            element.classList.add('fade-down');
+          } else if (element.classList.contains('fade-right')) {
+            element.classList.remove('fade-right');
+            void element.offsetWidth;
+            element.classList.add('fade-right');
+          } else if (element.classList.contains('fade-left')) {
+            element.classList.remove('fade-left');
+            void element.offsetWidth;
+            element.classList.add('fade-left');
+          } else if (element.classList.contains('fade-up')) {
+            element.classList.remove('fade-up');
+            void element.offsetWidth;
+            element.classList.add('fade-up');
+          } else {
+            element.classList.remove('fade');
+            void element.offsetWidth;
+            element.classList.add('fade');
+          }
+        }
+  
+        function setupIntersectionObserver() {
+          const elements = document.querySelectorAll('.animate');
+          const options = {
+            root: null,
+            rootMargin: '80px',
+            threshold: 0.1
+          };
+  
+          observer = new IntersectionObserver(handleIntersect, options);
+  
+          elements.forEach(element => {
+            observer.observe(element);
+          });
+        }
+        
+        document.addEventListener('DOMContentLoaded', setupIntersectionObserver);
+      </script>
     </body>
 </html>
