@@ -797,7 +797,7 @@ form > section:not(:first-child) {
 
 /*Itinerary styles*/
 video, iframe {
-    width: 80%;
+    width: 80vw;
     margin: 20px;
     border-radius: 20px;;
     box-shadow: 0 0 10px 3px black;
